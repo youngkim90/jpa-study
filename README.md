@@ -10,4 +10,4 @@
 <br><br>
 
 ## 참조자료
-- https://inf.run/6PDx(강사: 김영한)
+- https://inf.run/6PDx (강사: 김영한)
