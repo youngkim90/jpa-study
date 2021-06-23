@@ -14,15 +14,14 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")   //외래키
     private Item item;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")      //외래키
     private Order order;
 
     private int orderPrice; //주문가격
-
     private int count;  //주문 수량
 }

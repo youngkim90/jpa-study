@@ -25,10 +25,15 @@ public class Category {
             inverseJoinColumns = @JoinColumn(name = "item_id")) //다대다를 위한 중간 테이블
     private List<Item> items =  new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
 
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<>();
+
+    public void addChildCategory(Category child) {
+        this.child.add(child);
+        child.setParent(this);
+    }
 }

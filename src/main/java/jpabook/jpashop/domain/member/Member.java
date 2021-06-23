@@ -23,4 +23,5 @@ public class Member {
 
     @OneToMany(mappedBy = "member") //매핑이 직접 일어나지 않는 읽기전용
     private List<Order> orders = new ArrayList<>();
+
 }
