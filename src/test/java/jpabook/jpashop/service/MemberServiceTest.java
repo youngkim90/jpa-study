@@ -34,7 +34,7 @@ public class MemberServiceTest {
 
         //then
         em.flush(); //insert 실행
-        Assertions.assertEquals(member, memberRepository.findOne(savedId));
+        Assertions.assertEquals(member, memberRepository.findById(savedId).get());
 
     }
 
